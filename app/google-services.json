@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "36743610103",
+    "project_id": "tarcars-92a6c",
+    "storage_bucket": "tarcars-92a6c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36743610103:android:c5e22911f76b2bf4275df2",
+        "android_client_info": {
+          "package_name": "com.example.tarcars"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDZyT_cYMRyeb_Y3sK7lhKRnfEC4l_4mY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
