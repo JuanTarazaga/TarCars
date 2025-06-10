@@ -104,12 +104,12 @@ class CochesRepository {
         return try {
             val response = RetrofitInstance.apiCoches.obtenerMarcas()
             if (response.isSuccessful) {
-                response.body() ?: listOf("Audi", "BMW", "Mercedes") // Datos de prueba
+                response.body() ?: listOf("Audi", "BMW", "Mercedes")
             } else {
-                listOf("Audi", "BMW", "Mercedes") // Datos de prueba si falla
+                listOf("Audi", "BMW", "Mercedes")
             }
         } catch (e: Exception) {
-            listOf("Audi", "BMW", "Mercedes") // Datos de prueba si hay error
+            listOf("Audi", "BMW", "Mercedes")
         }
     }
 

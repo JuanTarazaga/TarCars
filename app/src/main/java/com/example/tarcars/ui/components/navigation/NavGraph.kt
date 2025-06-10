@@ -65,7 +65,6 @@ fun NavGraph(navController: NavHostController){
             val id = backStackEntry.arguments?.getString("id") ?: ""
             val viewModel: CocheViewModel = hiltViewModel()
 
-            // Cargar el coche cuando se abre la pantalla o cambia el ID
             LaunchedEffect(key1 = id) {
                 if (id.isNotEmpty()) {
                     viewModel.getCoche(id)

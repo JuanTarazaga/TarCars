@@ -41,14 +41,12 @@ class AjustesAdminViewModel @Inject constructor(
         user?.let { u ->
             _correo.value = u.email ?: ""
 
-            // Cargar datos del Firestore
             firestore.collection("usuarios").document(u.uid).get()
                 .addOnSuccessListener { doc ->
                     _nombre.value = doc.getString("nombre") ?: ""
                     _telefono.value = doc.getString("telefono") ?: ""
                 }
                 .addOnFailureListener {
-                    // Aquí puedes poner un mensaje de error si no se pueden cargar los datos
                     _mensaje.value = "Error al cargar los datos."
                 }
         }
@@ -63,7 +61,6 @@ class AjustesAdminViewModel @Inject constructor(
     ) {
         val uid = user?.uid ?: return
 
-        // Actualizar nombre y teléfono
         val datos = mapOf("nombre" to nuevoNombre, "telefono" to nuevoTelefono)
         firestore.collection("usuarios").document(uid).update(datos)
             .addOnSuccessListener {

@@ -16,7 +16,6 @@ class CocheViewModel @Inject constructor(
     private val cochesRepository: CochesRepository
 ) : ViewModel() {
 
-    // Usamos StateFlow para las propiedades
     private val _coche = MutableStateFlow<Coches?>(null)
     val coche: StateFlow<Coches?> = _coche
 

@@ -166,16 +166,14 @@ fun InfoItem1(texto: String, icono: Int) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.width(100.dp)
     ) {
-        // Icono con colores originales cuando es la etiqueta medioambiental
         if (icono == R.drawable.etiquetasmedioambientales3) {
             Icon(
                 painter = painterResource(id = icono),
                 contentDescription = texto,
                 modifier = Modifier.size(24.dp),
-                tint = Color.Unspecified // Esto muestra los colores originales
+                tint = Color.Unspecified
             )
         } else {
-            // Otros iconos con el color por defecto
             Icon(
                 painter = painterResource(id = icono),
                 contentDescription = texto,
@@ -267,7 +265,6 @@ fun CarruselImagenes(imagenes: List<String>) {
         }
     }
 
-    // Diálogo a pantalla completa con navegación
     if (mostrarDialog) {
         Dialog(onDismissRequest = { mostrarDialog = false }) {
             Box(
@@ -285,7 +282,6 @@ fun CarruselImagenes(imagenes: List<String>) {
                         .fillMaxHeight(0.85f)
                 )
 
-                // Botón cerrar
                 IconButton(
                     onClick = { mostrarDialog = false },
                     modifier = Modifier
@@ -299,7 +295,6 @@ fun CarruselImagenes(imagenes: List<String>) {
                     )
                 }
 
-                // Flechas navegación
                 if (imagenActual > 0) {
                     IconButton(
                         onClick = { imagenActual-- },

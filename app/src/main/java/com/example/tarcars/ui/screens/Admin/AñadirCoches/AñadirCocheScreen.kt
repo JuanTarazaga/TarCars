@@ -142,7 +142,7 @@ fun AñadirCocheScreen(
                 viewModel.insertarCoche(
                     coche = nuevoCoche,
                     onSuccess = { navController.popBackStack() },
-                    onError = { /* mostrar error */ }
+                    onError = {  }
                 )
             },
             modifier = Modifier.fillMaxWidth()

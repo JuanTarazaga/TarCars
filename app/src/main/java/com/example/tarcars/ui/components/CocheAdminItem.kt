@@ -33,7 +33,6 @@ fun CocheAdminItem(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            // Imagen del coche
             Image(
                 painter = rememberAsyncImagePainter(model = coche.imagen_principal),
                 contentDescription = "Imagen del coche",
@@ -43,7 +42,6 @@ fun CocheAdminItem(
                     .padding(4.dp)
             )
 
-            // Info y acciones
             Column(
                 modifier = Modifier.weight(1f)
             ) {
@@ -53,7 +51,6 @@ fun CocheAdminItem(
                 Text(text = "ID: ${coche.id}", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
             }
 
-            // Botones de acción
             Column(
                 verticalArrangement = Arrangement.spacedBy(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally

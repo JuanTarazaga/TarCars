@@ -85,7 +85,6 @@ fun EditarCocheScreen(
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                // IMÁGENES
                 Text("Imágenes", style = MaterialTheme.typography.titleSmall)
 
                 if (imagenPrincipal.isNotBlank()) {
@@ -131,7 +130,6 @@ fun EditarCocheScreen(
                     }
                 }
 
-                // INFORMACIÓN GENERAL
                 Text("Información", style = MaterialTheme.typography.titleSmall)
                 OutlinedTextField(value = titulo, onValueChange = { titulo = it }, label = { Text("Título") }, modifier = Modifier.fillMaxWidth())
                 OutlinedTextField(value = breveDescripcion, onValueChange = { breveDescripcion = it }, label = { Text("Breve descripción") }, modifier = Modifier.fillMaxWidth())
@@ -154,7 +152,6 @@ fun EditarCocheScreen(
                     )
                 }
 
-                // ESPECIFICACIONES
                 Text("Especificaciones", style = MaterialTheme.typography.titleSmall)
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     OutlinedTextField(value = marca, onValueChange = { marca = it }, label = { Text("Marca") }, modifier = Modifier.weight(1f))
@@ -169,7 +166,6 @@ fun EditarCocheScreen(
                     OutlinedTextField(value = cambio, onValueChange = { cambio = it }, label = { Text("Cambio") }, modifier = Modifier.weight(1f))
                 }
 
-                // UBICACIÓN Y ETIQUETA
                 Text("Ubicación y etiqueta", style = MaterialTheme.typography.titleSmall)
                 OutlinedTextField(value = localizacion, onValueChange = { localizacion = it }, label = { Text("Localización") }, modifier = Modifier.fillMaxWidth())
                 OutlinedTextField(value = etiqueta, onValueChange = { etiqueta = it }, label = { Text("Etiqueta") }, modifier = Modifier.fillMaxWidth())
@@ -177,7 +173,6 @@ fun EditarCocheScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // BOTÓN
                 Button(
                     onClick = {
                         val cocheEditado = cocheActual.copy(
@@ -202,7 +197,7 @@ fun EditarCocheScreen(
                         viewModel.actualizarCoche(
                             coche = cocheEditado,
                             onSuccess = { navController.popBackStack() },
-                            onError = { /* Mostrar error */ }
+                            onError = {  }
                         )
                     },
                     modifier = Modifier.fillMaxWidth()

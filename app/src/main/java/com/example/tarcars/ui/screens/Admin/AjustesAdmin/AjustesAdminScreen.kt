@@ -147,7 +147,7 @@ fun AjustesAdminScreen(navController: NavController) {
                             }
                         },
                         modifier = Modifier.weight(1f),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFFA500)) // naranja
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFFA500))
                     ) {
                         Text("BANEAR", color = Color.White, fontWeight = FontWeight.Bold)
                     }
@@ -159,7 +159,7 @@ fun AjustesAdminScreen(navController: NavController) {
                             }
                         },
                         modifier = Modifier.weight(1f),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4CAF50)) // verde
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4CAF50))
                     ) {
                         Text("DESBANEAR", color = Color.White, fontWeight = FontWeight.Bold)
                     }

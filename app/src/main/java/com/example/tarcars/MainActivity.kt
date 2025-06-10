@@ -81,7 +81,7 @@ fun App1(){
         },
         bottomBar = {
             val bottomBarContent = getBottomBarForRoute(currentRoute, navController)
-            bottomBarContent?.invoke() // Muestra el BottomBar si no es nulo
+            bottomBarContent?.invoke()
         }
     )
 }

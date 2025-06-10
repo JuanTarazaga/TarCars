@@ -49,7 +49,6 @@ fun SplashScreen(navController: NavHostController) {
                     popUpTo(Destinations.SPLASH_SCREEN) { inclusive = true }
                 }
             } catch (e: Exception) {
-                // Maneja errores (ej. red o documento no encontrado)
                 navController.navigate(Destinations.LOGIN_SCREEN) {
                     popUpTo(Destinations.SPLASH_SCREEN) { inclusive = true }
                 }
@@ -64,7 +63,6 @@ fun SplashScreen(navController: NavHostController) {
 
     @Composable
 fun Splash() {
-    // degradado lineal
     val gradient = Brush.linearGradient(
         colors = listOf(Color(0xFF000000), Color(0xFF737373), Color(0xFF333333)),
         start = androidx.compose.ui.geometry.Offset.Zero,
